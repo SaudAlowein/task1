@@ -1,0 +1,10 @@
+ -How to use ESP32 with a webpage-
+    1) Program the ESP32 using the Arduino IDE
+    2) Insure that it can interact using HTTP requests 
+        Example code: 1. #include <HTTPClient.h>
+    3) Create an HTTP request from ESP32 to the webpage (in this case the speech recognition page)
+        Example code: 1. http.begin(client, servername)
+                      2. response_code = httpGETRequest(servername)
+    4) The page returns a response
+    5) The response is parsed for the desired information
+        Example code: 1. JSON.parse(response_code)
